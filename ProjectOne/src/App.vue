@@ -1,15 +1,16 @@
-// first script without setup for the export default name property so debuggers
-work better, still needed? test
 <script>
 export default {
   name: "App",
+  data() {
+    return { firstName: "john" };
+  },
 };
 </script>
 
 <script setup></script>
 
 <template>
-  <div>Hello world in Vue!</div>
+  <div>{{ firstName }}</div>
 </template>
 
 <style scoped></style>
