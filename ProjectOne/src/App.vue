@@ -3,8 +3,8 @@ export default {
   name: "App",
   data() {
     return {
-      firstName: "John",
-      lastName: "Silver",
+      firstName: "Finn",
+      lastName: " van Gestel",
     };
   },
   // mounted() {
