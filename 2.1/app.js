@@ -17,7 +17,8 @@ const vm = Vue.createApp({
     Increment() {
       this.age++;
     },
-    updateLastName(event) {
+    updateLastName(message, event) {
+      // event.preventDefault(); no longer needed, added as an event modifier in the html
       this.lastName = event.target.value;
     },
   },
