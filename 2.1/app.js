@@ -2,7 +2,8 @@ const vm = Vue.createApp({
   data() {
     return {
       firstName: "Finn",
-      lastName: " van Gestel",
+      middleName: "",
+      lastName: "Gestel",
       url: "https://google.com",
       raw_url: `<a href="https://google.com" target="_blank">
           Google
@@ -12,10 +13,15 @@ const vm = Vue.createApp({
   },
   methods: {
     fullName() {
-      return `${this.firstName} ${this.lastName.toUpperCase()}`;
+      return `${this.firstName} ${
+        this.middleName
+      } ${this.lastName.toUpperCase()}`;
     },
     Increment() {
       this.age++;
+    },
+    updateMiddleName(event) {
+      this.middleName = event.target.value;
     },
     updateLastName(message, event) {
       // event.preventDefault(); no longer needed, added as an event modifier in the html
