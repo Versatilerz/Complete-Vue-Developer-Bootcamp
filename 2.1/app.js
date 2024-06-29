@@ -30,13 +30,13 @@ const vm = Vue.createApp({
       } ${this.lastName.toUpperCase()}`;
     },
   },
-  watch: {
-    age(newValue, oldVal) {
-      setTimeout(() => {
-        this.age = 20;
-      }, 3000);
-    },
-  },
+  // watch: {
+  //   age(newValue, oldVal) {
+  //     setTimeout(() => {
+  //       this.age = 20;
+  //     }, 3000);
+  //   },
+  // },
 }).mount("#app");
 
 // setTimeout(() => {
