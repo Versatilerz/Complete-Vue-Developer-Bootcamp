@@ -25,7 +25,7 @@
         @input.prevent="updateLastName('lastNameEventTrigger', $event)"
       />
 
-      <button type="button" @click="Increment">Increment</button>
+      <button type="button" @click.ctrl="Increment">Increment</button>
       <button type="button" @click="age--">Decrement</button>
     </div>
 
