@@ -12,11 +12,6 @@ const vm = Vue.createApp({
     };
   },
   methods: {
-    fullName() {
-      return `${this.firstName} ${
-        this.middleName
-      } ${this.lastName.toUpperCase()}`;
-    },
     Increment() {
       this.age++;
     },
@@ -26,6 +21,13 @@ const vm = Vue.createApp({
     updateLastName(message, event) {
       // event.preventDefault(); no longer needed, added as an event modifier in the html
       this.lastName = event.target.value;
+    },
+  },
+  computed: {
+    fullName() {
+      return `${this.firstName} ${
+        this.middleName
+      } ${this.lastName.toUpperCase()}`;
     },
   },
 }).mount("#app");
