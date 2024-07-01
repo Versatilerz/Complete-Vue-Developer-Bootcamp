@@ -18,7 +18,11 @@ const vm = Vue.createApp({
       };
     },
     box_style() {
-      return { width: `this.perspective` };
+      return {
+        background: `rgb(${this.rotateX},${this.rotateY}, ${this.rotateZ}, ${
+          this.perspective / 100
+        })`,
+      };
     },
   },
   methods: {
