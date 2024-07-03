@@ -1,0 +1,40 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <p>
+        the if else directives only work if they are on the same "level". No
+        wrapping data can be placed around it.
+      </p>
+      <p v-if="mode == 1">Showing v-if directive content</p>
+      <template v-else-if="mode == 2">
+        <p>Bonus content</p>
+        <h3>
+          Showing v-else if directive content, only works afther an v-if
+          directive on the element before it.
+        </h3></template
+      >
+      <p v-else>
+        Showing v-else directive content, does not need a condition. Comes
+        afther previous if-else statements.
+      </p>
+
+      <!-- v-show hides the element, v if completelty removes the element from the dom -->
+      <i v-show="mode == 1">v-show</i>
+
+      <select v-model="mode">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
