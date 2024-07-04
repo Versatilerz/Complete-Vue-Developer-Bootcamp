@@ -2,7 +2,7 @@
   <h3>Hey!</h3>
 
   <Greeting></Greeting>
-  <User></User>
+  <User :age="age"></User>
 </template>
 
 <script>
@@ -14,6 +14,11 @@ export default {
   components: {
     Greeting,
     User,
+  },
+  data() {
+    return {
+      age: 25,
+    };
   },
 };
 </script>
