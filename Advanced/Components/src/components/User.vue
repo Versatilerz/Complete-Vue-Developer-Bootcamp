@@ -7,7 +7,12 @@
 <script>
 export default {
   name: "User",
-  props: ["age"],
+  props: {
+    age: {
+      type: Number,
+      required: true,
+    },
+  },
   emits: ["ageChange"],
   computed: {
     ageDoubled() {
