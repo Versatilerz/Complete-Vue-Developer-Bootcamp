@@ -1,5 +1,7 @@
 <template>
-  <Greeting />
+  <p>
+    <Greeting />
+  </p>
 </template>
 
 <script>

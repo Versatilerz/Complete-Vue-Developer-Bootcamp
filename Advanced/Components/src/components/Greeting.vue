@@ -12,3 +12,9 @@ export default {
   },
 };
 </script>
+
+<style>
+p {
+  color: red;
+}
+</style>
