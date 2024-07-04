@@ -1,5 +1,6 @@
 <template>
-  <button type="button" @click="onClickAge">Update age</button>
+  <button type="button" @click="onClickAge">Update age by 1</button>
+  <button type="button" @click="ageChangeFn(3)">Update age by 3</button>
   <p>The user is {{ age }} years old</p>
   <p>{{ ageDoubled }}</p>
 </template>
@@ -16,6 +17,7 @@ export default {
         return value < 130;
       },
     },
+    ageChangeFn: Function,
   },
   emits: ["ageChange"],
   computed: {

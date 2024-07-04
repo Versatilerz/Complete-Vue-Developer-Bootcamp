@@ -2,7 +2,7 @@
   <h3>Hey!</h3>
 
   <Greeting :age="age"></Greeting>
-  <User :age="age" @ageChange="updateAge"></User>
+  <User :age="age" @ageChange="updateAge" :ageChangeFn="updateAgeCB"></User>
 </template>
 
 <script>
@@ -25,6 +25,9 @@ export default {
       if (this.age < 75) {
         this.age += num;
       } else return;
+    },
+    updateAgeCB(num) {
+      this.age += num;
     },
   },
 };
