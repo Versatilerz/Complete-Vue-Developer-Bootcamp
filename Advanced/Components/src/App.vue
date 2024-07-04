@@ -1,17 +1,19 @@
 <template>
-  <p>Hey!</p>
-  <p>
-    <Greeting />
-  </p>
+  <h3>Hey!</h3>
+
+  <Greeting></Greeting>
+  <User></User>
 </template>
 
 <script>
 import Greeting from "@/components/Greeting.vue";
+import User from "@/components/User.vue";
 
 export default {
   name: "App",
   components: {
     Greeting,
+    User,
   },
 };
 </script>
