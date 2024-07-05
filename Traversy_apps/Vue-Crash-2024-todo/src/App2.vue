@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const name = ref("Composition API");
 const status = ref("active");
@@ -22,6 +22,20 @@ const addTask = () => {
     newTask.value = "";
   }
 };
+
+const deleteTask = (index) => {
+  tasks.value.splice(index, 1);
+};
+
+onMounted(async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const data = await response.json();
+    tasks.value = data.map((task) => task.title);
+  } catch (error) {
+    console.log("error fetching tasks");
+  }
+});
 </script>
 
 <template>
@@ -39,7 +53,10 @@ const addTask = () => {
 
   <h3>Tasks:</h3>
   <ul>
-    <li v-for="(task, index) in tasks">{{ task }}</li>
+    <li v-for="(task, index) in tasks">
+      <span>{{ task }}</span
+      ><button @click="deleteTask(index)">X</button>
+    </li>
   </ul>
 
   <!-- <a v-bind:href="link">Click for Google</a> -->
