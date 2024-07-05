@@ -14,8 +14,8 @@ export default {
   name: "App",
   components: {
     Questions,
-    Result
-  }
+    Result,
+  },
   data() {
     return {
       questions: [
