@@ -139,6 +139,48 @@
         "contactEmail": "bymokul@mailinator.com",
         "contactPhone": "+1 (134) 308-1665"
       }
+    },
+    {
+      "id": "e78e",
+      "title": "Simone Stevenson",
+      "type": "Internship",
+      "location": "Tenetur sed qui reru",
+      "description": "Ut sed omnis eligend",
+      "salary": "$100K - $125K",
+      "company": {
+        "name": "Guy Mack Associates",
+        "description": "Reiciendis quod omni",
+        "contactEmail": "gifasexo@mailinator.com",
+        "contactPhone": "+1 (358) 712-2777"
+      }
+    },
+    {
+      "id": "6881",
+      "title": "Melodie Bryant",
+      "type": "Internship",
+      "location": "Laboris accusamus te",
+      "description": "Eligendi ad maiores ",
+      "salary": "$125K - $150K",
+      "company": {
+        "name": "Hinton Pena Trading",
+        "description": "Cupidatat sequi labo",
+        "contactEmail": "fuwox@mailinator.com",
+        "contactPhone": "+1 (895) 832-6411"
+      }
+    },
+    {
+      "id": "6710",
+      "title": "Wylie Pratt",
+      "type": "Part-Time",
+      "location": "Repellendus Archite",
+      "description": "Voluptatem eu soluta",
+      "salary": "$80K - $90K",
+      "company": {
+        "name": "Ellison and Carver Traders",
+        "description": "Vitae soluta consequ",
+        "contactEmail": "saxocis@mailinator.com",
+        "contactPhone": "+1 (288) 222-1898"
+      }
     }
   ]
 }
