@@ -15,18 +15,18 @@
       }
     },
     {
-      "id": "2",
       "title": "Front-End Engineer (Vue)",
-      "type": "Full-Time",
-      "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
+      "type": "Part-Time",
       "location": "Miami, FL",
-      "salary": "$70K - $80K",
+      "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
+      "salary": "$175K - $200K",
       "company": {
         "name": "Veneer Solutions",
         "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
         "contactEmail": "contact@loremipsum.com",
         "contactPhone": "555-555-5555"
-      }
+      },
+      "id": "2"
     },
     {
       "id": "3",
@@ -99,17 +99,17 @@
       "id": "2b1b"
     },
     {
-      "id": "4d9c",
-      "title": "Tamara Valentine",
-      "type": "Internship",
-      "location": "Incididunt recusanda",
-      "description": "Voluptatum laborum ",
-      "salary": "$50K - $60K",
+      "id": "6923",
+      "title": "Cassandra Ramos",
+      "type": "Full-Time",
+      "location": "Reiciendis consequat",
+      "description": "Repudiandae fugiat n",
+      "salary": "$80K - $90K",
       "company": {
-        "name": "Donaldson Albert Inc",
-        "description": "Enim voluptas proide",
-        "contactEmail": "nyxupatug@mailinator.com",
-        "contactPhone": "+1 (623) 458-1691"
+        "name": "Good and Morgan Co",
+        "description": "Minima quas officia ",
+        "contactEmail": "zykycu@mailinator.com",
+        "contactPhone": "+1 (718) 791-9664"
       }
     }
   ]
