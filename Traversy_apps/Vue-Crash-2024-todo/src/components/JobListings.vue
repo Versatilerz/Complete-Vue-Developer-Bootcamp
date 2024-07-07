@@ -2,6 +2,7 @@
 import jobData from "@/jobs.json";
 import { ref, defineProps } from "vue";
 import JobListing from "./JobListing.vue";
+import { RouterLink } from "vue-router";
 
 const jobs = ref(jobData);
 defineProps({

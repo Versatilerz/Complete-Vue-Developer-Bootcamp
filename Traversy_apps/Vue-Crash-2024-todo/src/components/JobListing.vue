@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, computed, ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const props = defineProps({
   job: Object,

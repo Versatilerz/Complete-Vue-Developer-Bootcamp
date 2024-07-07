@@ -1,5 +1,6 @@
 <script setup>
 import Card from "./Card.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
