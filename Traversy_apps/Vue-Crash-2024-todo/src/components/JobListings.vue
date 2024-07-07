@@ -1,16 +1,34 @@
 <script setup>
-import jobData from "@/jobs.json";
-import { ref, defineProps } from "vue";
-import JobListing from "./JobListing.vue";
+import { ref, defineProps, onMounted, reactive } from "vue";
 import { RouterLink } from "vue-router";
+import JobListing from "./JobListing.vue";
+import axios from "axios";
 
-const jobs = ref(jobData);
 defineProps({
   limit: Number,
   showButton: {
     type: Boolean,
     default: false,
   },
+});
+
+// this works just fine.. but lets see how its done using reactive aswell:
+// const jobs = ref([]);
+
+const state = reactive({
+  jobs: [],
+  isLoading: true,
+});
+
+onMounted(async () => {
+  try {
+    const response = await axios.get("http://localhost:8000/jobs");
+    state.jobs = response.data;
+  } catch (error) {
+    console.log("error fetchting jobs", error);
+  } finally {
+    state.isLoading = false;
+  }
 });
 </script>
 
@@ -22,7 +40,7 @@ defineProps({
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <JobListing
-          v-for="job in jobs.slice(0, limit || jobs.length)"
+          v-for="job in state.jobs.slice(0, limit || state.jobs.length)"
           :key="job.id"
           :job="job"
         />
