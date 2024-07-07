@@ -85,18 +85,18 @@
       }
     },
     {
-      "id": "2b1b",
-      "title": "Urielle Franklin",
-      "type": "Remote",
-      "location": "Corrupti corporis s",
-      "description": "In tempora qui delen",
-      "salary": "$80K - $90K",
+      "title": "Hayden Velasquez",
+      "type": "Part-Time",
+      "location": "Dolore consectetur h",
+      "description": "Facilis sed ea sed e",
+      "salary": "$100K - $125K",
       "company": {
-        "name": "Langley Richmond Traders",
-        "description": "Sed sit facilis debi",
-        "contactEmail": "bymokul@mailinator.com",
-        "contactPhone": "+1 (134) 308-1665"
-      }
+        "name": "Vinson and Ochoa Inc",
+        "description": "Occaecat nisi adipis",
+        "contactEmail": "nedafo@mailinator.com",
+        "contactPhone": "+1 (806) 352-7694"
+      },
+      "id": "2b1b"
     },
     {
       "id": "4d9c",
