@@ -18,6 +18,7 @@ onMounted(async () => {
   try {
     const response = await axios.get(`/api/jobs/${jobId}`);
     state.job = response.data;
+    console.log(response.data);
   } catch (error) {
     console.log("error fetchting job", error);
   } finally {
