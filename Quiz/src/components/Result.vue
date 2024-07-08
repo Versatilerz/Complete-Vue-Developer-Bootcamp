@@ -6,12 +6,12 @@ export default {
     resultIndex() {
       let index = 0;
 
-      this.results.forEach((result, index) => {
+      this.results.forEach((result, index2) => {
         if (
           result.min <= this.totalCorrect &&
           result.max >= this.totalCorrect
         ) {
-          index = index;
+          index = index2;
         }
       });
 
