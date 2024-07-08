@@ -1,11 +1,3 @@
-<template>
-  <div class="ctr">
-    <Questions v-if="questionsAnswered < questions.length" />
-    <Result v-else />
-    <button type="button" class="reset-btn">Reset</button>
-  </div>
-</template>
-
 <script>
 import Questions from "./components/Questions.vue";
 import Result from "./components/Result.vue";
@@ -19,6 +11,7 @@ export default {
   data() {
     return {
       questionsAnswered: 0,
+      totalCorect: 0,
       questions: [
         {
           q: "What is 2 + 2?",
@@ -98,5 +91,13 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="ctr">
+    <Questions v-if="questionsAnswered < questions.length" />
+    <Result v-else />
+    <button type="button" class="reset-btn">Reset</button>
+  </div>
+</template>
 
 <style></style>

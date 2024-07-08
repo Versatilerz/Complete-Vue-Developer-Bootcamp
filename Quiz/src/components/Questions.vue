@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: "Questions",
+};
+</script>
+
 <template>
   <div class="questions-ctr">
     <div class="progress">
@@ -15,9 +21,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Questions",
-};
-</script>
