@@ -89,6 +89,14 @@ export default {
       ],
     };
   },
+  methods: {
+    questionAnswerd(is_correct) {
+      if (is_correct) {
+        this.totalCorrect++;
+      }
+      this.questionsAnswered++;
+    },
+  },
 };
 </script>
 
@@ -97,6 +105,8 @@ export default {
     <Questions
       v-if="questionsAnswered < questions.length"
       :questions="questions"
+      :questionsAnswered="questionsAnswered"
+      @question-answered="questionAnswerd"
     />
     <Result v-else />
     <button type="button" class="reset-btn">Reset</button>
