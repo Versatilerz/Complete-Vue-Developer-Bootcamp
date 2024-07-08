@@ -96,6 +96,10 @@ export default {
       }
       this.questionsAnswered++;
     },
+    onReset() {
+      this.totalCorrect = 0;
+      this.questionsAnswered = 0;
+    },
   },
 };
 </script>
@@ -108,8 +112,15 @@ export default {
       :questionsAnswered="questionsAnswered"
       @question-answered="questionAnswerd"
     />
-    <Result v-else />
-    <button type="button" class="reset-btn">Reset</button>
+    <Result v-else :results="results" :totalCorrect="totalCorrect" />
+    <button
+      v-if="questionsAnswered === questions.length"
+      type="button"
+      class="reset-btn"
+      @click="onReset"
+    >
+      Reset
+    </button>
   </div>
 </template>
 
