@@ -1,11 +1,12 @@
 <script>
 import useModalStore from '@/stores/modal';
-import { mapState } from 'pinia';
+import { mapState, mapWritableState } from 'pinia';
 
 export default {
   name: 'Auth',
   computed: {
-    ...mapState(useModalStore, ['hiddenClass'])
+    ...mapState(useModalStore, ['hiddenClass']),
+    ...mapWritableState(useModalStore, ['isOpen'])
   }
 };
 </script>
@@ -29,7 +30,7 @@ export default {
         <!-- Add margin if you want to see some of the overlay behind the modal-->
         <div class="py-4 text-left px-6">
           <!--Title-->
-          <div class="flex justify-between items-center pb-4">
+          <div class="flex justify-between items-center pb-4" @click="isOpen = false">
             <p class="text-2xl font-bold">Your Account</p>
             <!-- Modal Close Button -->
             <div class="modal-close cursor-pointer z-50">
