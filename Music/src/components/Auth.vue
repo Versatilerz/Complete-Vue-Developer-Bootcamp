@@ -8,7 +8,7 @@ export default {
     return {
       tab: 'login',
       schema: {
-        Name: 'required'
+        Name: 'required|min:3|max:15|alpha_spaces'
         // Email: ' ',
         // Age: ' ',
         // Password: '',
