@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <Header></Header>
 
   <!-- Introduction -->
   <section class="mb-8 py-20 text-white text-center relative">
@@ -277,5 +277,5 @@ export default {
       <div class="player-duration">03:06</div>
     </div>
   </div>
-  <AppAuth />
+  <Auth />
 </template>
