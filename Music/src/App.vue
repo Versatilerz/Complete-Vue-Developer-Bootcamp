@@ -1,12 +1,12 @@
 <script>
-import AppHeader from '@/components/AppHeader.vue';
-import AppAuth from '@/components/AppAuth.vue';
+import Header from '@/components/Header.vue';
+import Auth from '@/components/Auth.vue';
 
 export default {
   name: 'App',
   components: {
-    AppHeader,
-    AppAuth
+    Header,
+    Auth
   }
 };
 </script>
