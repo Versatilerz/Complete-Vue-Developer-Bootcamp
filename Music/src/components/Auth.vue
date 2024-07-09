@@ -6,7 +6,16 @@ export default {
   name: 'Auth',
   data() {
     return {
-      tab: 'login'
+      tab: 'login',
+      schema: {
+        Name: 'required'
+        // Email: ' ',
+        // Age: ' ',
+        // Password: '',
+        // Confirm_password: '',
+        // Countr: '',
+        // Tos: ''
+      }
     };
   },
   computed: {
@@ -101,15 +110,17 @@ export default {
             </button>
           </form>
           <!-- Registration Form -->
-          <form v-show="tab === 'register'">
+          <vee-form v-show="tab === 'register'" :validation-schema="schema">
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
-              <input
+              <vee-field
+                name="Name"
                 type="text"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Name"
               />
+              <ErrorMessage class="text-red-600" name="Name" />
             </div>
             <!-- Email -->
             <div class="mb-3">
@@ -168,7 +179,7 @@ export default {
             >
               Submit
             </button>
-          </form>
+          </vee-form>
         </div>
       </div>
     </div>
