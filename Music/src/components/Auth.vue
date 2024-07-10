@@ -8,9 +8,9 @@ export default {
     return {
       tab: 'login',
       schema: {
-        Name: 'required|min:3|max:15|alpha_spaces'
-        // Email: ' ',
-        // Age: ' ',
+        Name: 'required|min:3|max:15|alpha_spaces',
+        Email: 'required|min:5|max:50|email',
+        Age: 'required|min_value:1|max_value:130'
         // Password: '',
         // Confirm_password: '',
         // Countr: '',
@@ -125,19 +125,23 @@ export default {
             <!-- Email -->
             <div class="mb-3">
               <label class="inline-block mb-2">Email</label>
-              <input
+              <vee-Field
+                name="Email"
                 type="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email"
               />
+              <ErrorMessage class="text-red-600" name="Email" />
             </div>
             <!-- Age -->
             <div class="mb-3">
               <label class="inline-block mb-2">Age</label>
-              <input
+              <vee-field
+                name="Age"
                 type="number"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
               />
+              <ErrorMessage class="text-red-600" name="Age" />
             </div>
             <!-- Password -->
             <div class="mb-3">
