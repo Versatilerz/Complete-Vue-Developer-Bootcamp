@@ -10,8 +10,8 @@ export default {
       schema: {
         Name: 'required|min:3|max:15|alpha_spaces',
         Email: 'required|min:5|max:50|email',
-        Age: 'required|min_value:1|max_value:130'
-        // Password: '',
+        Age: 'required|min_value:18|max_value:130',
+        Password: 'required'
         // Confirm_password: '',
         // Countr: '',
         // Tos: ''
@@ -146,11 +146,13 @@ export default {
             <!-- Password -->
             <div class="mb-3">
               <label class="inline-block mb-2">Password</label>
-              <input
+              <vee-field
+                name="Password"
                 type="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password"
               />
+              <ErrorMessage class="text-red-600" name="Password" />
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
