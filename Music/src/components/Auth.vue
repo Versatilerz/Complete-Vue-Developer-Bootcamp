@@ -12,9 +12,9 @@ export default {
         Email: 'required|min:5|max:50|email',
         Age: 'required|min_value:18|max_value:130',
         Password: 'required|min:3|max:100',
-        Confirm_password: 'required|confirmed:@Password'
-        // Countr: '',
-        // Tos: ''
+        Confirm_password: 'required|confirmed:@Password',
+        Country: 'required|excluded:Antarctica',
+        Tos: 'required'
       }
     };
   },
@@ -168,18 +168,28 @@ export default {
             <!-- Country -->
             <div class="mb-3">
               <label class="inline-block mb-2">Country</label>
-              <select
+              <vee-field
+                as="select"
+                name="Country"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
               >
                 <option value="USA">USA</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Germany">Germany</option>
-              </select>
+                <option value="Antarctica">Antartica</option>
+              </vee-field>
+              <ErrorMessage class="text-red-600" name="Country" />
             </div>
             <!-- TOS -->
             <div class="mb-3 pl-6">
-              <input type="checkbox" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
+              <vee-field
+                name="Tos"
+                type="checkbox"
+                class="w-4 h-4 float-left -ml-6 mt-1 rounded"
+                value="1"
+              />
               <label class="inline-block">Accept terms of service</label>
+              <ErrorMessage class="text-red-600" name="Tos" />
             </div>
             <button
               type="submit"

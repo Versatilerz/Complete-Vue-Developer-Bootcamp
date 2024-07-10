@@ -99,20 +99,6 @@
       }
     },
     {
-      "id": "d1f6",
-      "title": "Xanthus Franklin",
-      "type": "Internship",
-      "location": "Ipsa dolores ullamc",
-      "description": "In cupiditate recusa",
-      "salary": "$60K - $70K",
-      "company": {
-        "name": "Horn and Holcomb Associates",
-        "description": "Ad laborum Sed dese",
-        "contactEmail": "fopi@mailinator.com",
-        "contactPhone": "+1 (452) 981-9939"
-      }
-    },
-    {
       "id": "cfb5",
       "title": "Dawn Conway",
       "type": "Part-Time",
@@ -124,6 +110,20 @@
         "description": "Mollit unde dolores ",
         "contactEmail": "katyguz@mailinator.com",
         "contactPhone": "+1 (191) 574-7151"
+      }
+    },
+    {
+      "id": "6ada",
+      "title": "Vincent Warner",
+      "type": "Remote",
+      "location": "Et dolore animi nec",
+      "description": "Est facilis consequ",
+      "salary": "$50K - $60K",
+      "company": {
+        "name": "Joseph Marsh Trading",
+        "description": "Eveniet fugiat nec",
+        "contactEmail": "vynajola@mailinator.com",
+        "contactPhone": "+1 (698) 604-5419"
       }
     }
   ]
