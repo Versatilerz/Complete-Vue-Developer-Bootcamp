@@ -23,6 +23,11 @@ export default {
     ...mapWritableState(useModalStore, {
       modalVisibility: 'isOpen'
     })
+  },
+  methods: {
+    register(values) {
+      console.log(values);
+    }
   }
 };
 </script>
@@ -110,7 +115,7 @@ export default {
             </button>
           </form>
           <!-- Registration Form -->
-          <vee-form v-show="tab === 'register'" :validation-schema="schema">
+          <vee-form v-show="tab === 'register'" :validation-schema="schema" @submit="register">
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
@@ -189,7 +194,7 @@ export default {
                 value="1"
               />
               <label class="inline-block">Accept terms of service</label>
-              <ErrorMessage class="text-red-600" name="Tos" />
+              <ErrorMessage class="text-red-600 block" name="Tos" />
             </div>
             <button
               type="submit"
