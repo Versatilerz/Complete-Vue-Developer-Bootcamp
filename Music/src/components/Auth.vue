@@ -12,9 +12,9 @@ export default {
         Email: 'required|min:5|max:50|email',
         Age: 'required|min_value:18|max_value:130',
         Password: 'required|min:9|max:100|excluded:password',
-        Confirm_password: 'required|confirmed:@Password',
-        Country: 'required|excluded:Antarctica',
-        Tos: 'required'
+        Confirm_password: 'confirmed_password:@Password',
+        Country: 'required|country_excluded:Antarctica',
+        Tos: 'tos'
       },
       userData: {
         country: 'USA'
