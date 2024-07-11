@@ -55,7 +55,12 @@ export default {
           : `The field ${contex.field} is invalid`;
 
         return message;
-      }
+      },
+      // below is the default behavior for the validation.
+      validateOnBlur: true,
+      validateOnChange: true,
+      validateOnInput: false,
+      validateOnModelUpdate: true
     });
   }
 };
