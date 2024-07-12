@@ -6,8 +6,8 @@ const firebaseConfig = {
   authDomain: 'music-vue-15343.firebaseapp.com',
   projectId: 'music-vue-15343',
   storageBucket: 'music-vue-15343.appspot.com',
-  appId: '1:739620497838:web:587f96ab91275e13eb403f'
-  //   measurementId: 'G-QT6ZTW9XF0'
+  appId: '1:739620497838:web:587f96ab91275e13eb403f',
+  measurementId: 'G-QT6ZTW9XF0'
 };
 
 export default firebase.initializeApp(firebaseConfig);
