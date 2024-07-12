@@ -1,5 +1,5 @@
 <script>
-import { auth, db } from '@/includes/firebase';
+import { auth, usersCollection } from '@/includes/firebase';
 
 export default {
   name: 'RegisterForm',
@@ -38,6 +38,20 @@ export default {
       let userCred = null;
       try {
         userCred = await auth.createUserWithEmailAndPassword(values.Email, values.Password);
+      } catch (error) {
+        this.reg_in_submission = false;
+        this.reg_alert_variant = 'bg-red-500';
+        this.reg_alert_message = 'An unexpected error accured. Please try again later';
+        return;
+      }
+
+      try {
+        await usersCollection.add({
+          name: values.Name,
+          email: values.Email,
+          age: values.Age,
+          country: values.Country
+        });
       } catch (error) {
         this.reg_in_submission = false;
         this.reg_alert_variant = 'bg-red-500';
