@@ -1,7 +1,7 @@
 <script>
 import useModalStore from '@/stores/modal';
 import { mapState, mapWritableState } from 'pinia';
-import firebase from '@/includes/firebase';
+import { auth, db } from '@/includes/firebase';
 
 export default {
   name: 'RegisterForm',
@@ -44,9 +44,7 @@ export default {
       this.reg_alert_message = 'Please wait! Your account is being created.';
       let userCred = null;
       try {
-        userCred = await firebase
-          .auth()
-          .createUserWithEmailAndPassword(values.Email, values.Password);
+        userCred = await auth.createUserWithEmailAndPassword(values.Email, values.Password);
       } catch (error) {
         this.reg_in_submission = false;
         this.reg_alert_variant = 'bg-red-500';
