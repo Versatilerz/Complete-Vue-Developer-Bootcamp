@@ -1,6 +1,4 @@
 <script>
-import useModalStore from '@/stores/modal';
-import { mapState, mapWritableState } from 'pinia';
 import { auth, db } from '@/includes/firebase';
 
 export default {
@@ -29,12 +27,7 @@ export default {
       reg_alert_message: 'Please wait! Your account is being created.'
     };
   },
-  computed: {
-    ...mapState(useModalStore, ['hiddenClass']),
-    ...mapWritableState(useModalStore, {
-      modalVisibility: 'isOpen'
-    })
-  },
+
   methods: {
     async register(values) {
       console.log(values);

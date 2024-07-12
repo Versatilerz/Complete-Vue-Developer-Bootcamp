@@ -1,7 +1,4 @@
 <script>
-import useModalStore from '@/stores/modal';
-import { mapState, mapWritableState } from 'pinia';
-
 export default {
   name: 'Loginform',
   data() {
@@ -16,12 +13,6 @@ export default {
       login_alert_variant: 'bg-blue-500',
       login_alert_message: 'Please wait! We are logging you in.'
     };
-  },
-  computed: {
-    ...mapState(useModalStore, ['hiddenClass']),
-    ...mapWritableState(useModalStore, {
-      modalVisibility: 'isOpen'
-    })
   },
   methods: {
     login(values) {
