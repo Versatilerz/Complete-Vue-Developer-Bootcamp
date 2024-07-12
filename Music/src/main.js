@@ -7,6 +7,7 @@ import router from './router';
 import './assets/base.css';
 import './assets/main.css';
 import VeeValidatePlugin from './includes/validation';
+import './includes/firebase';
 
 const app = createApp(App);
 
