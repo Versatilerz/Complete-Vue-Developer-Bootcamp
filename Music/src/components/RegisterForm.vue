@@ -1,6 +1,5 @@
 <script>
-import { auth, usersCollection } from '@/includes/firebase';
-import { mapWritableState } from 'pinia';
+import { mapActions } from 'pinia';
 import useUserStore from '@/stores/user';
 
 export default {
@@ -15,9 +14,6 @@ export default {
         Confirm_password: 'confirmed_password:@Password',
         Country: 'required|country_excluded:Antarctica',
         Tos: 'tos'
-      },
-      computed: {
-        ...mapWritableState(useUserStore, ['userLoggedIn'])
       },
       loginSchema: {
         Email: 'required|min:5|max:50|email',
@@ -34,41 +30,27 @@ export default {
   },
 
   methods: {
+    ...mapActions(useUserStore, {
+      createUser: 'register'
+    }),
     async register(values) {
       console.log(values);
       this.reg_show_alert = true;
       this.reg_in_submission = true;
       this.reg_alert_variant = 'bg-blue-500';
       this.reg_alert_message = 'Please wait! Your account is being created.';
-      let userCred = null;
+
       try {
-        userCred = await auth.createUserWithEmailAndPassword(values.Email, values.Password);
+        await this.createUser(values);
       } catch (error) {
         this.reg_in_submission = false;
         this.reg_alert_variant = 'bg-red-500';
         this.reg_alert_message = 'An unexpected error accured. Please try again later';
         return;
       }
-
-      try {
-        await usersCollection.add({
-          name: values.Name,
-          email: values.Email,
-          age: values.Age,
-          country: values.Country
-        });
-      } catch (error) {
-        this.reg_in_submission = false;
-        this.reg_alert_variant = 'bg-red-500';
-        this.reg_alert_message = 'An unexpected error accured. Please try again later';
-        return;
-      }
-
-      this.userLoggedIn = true;
 
       this.reg_alert_variant = 'bg-green-500';
       this.reg_alert_message = 'Succes! Your account has been created';
-      console.log(userCred);
     }
   }
 };
